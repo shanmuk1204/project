@@ -1,299 +1,140 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Food & Restaurant Finder</title>
+    <title>FoodHub - Inspired by Zomato/Swiggy</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <div id="app-container">
+    <div id="food-app-container">
+        <nav class="navbar">
+            <div class="logo">FoodHub</div>
+            <div class="nav-links">
+                <a href="#">Log In</a>
+                <a href="#" class="btn-signup">Sign Up</a>
+                <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            </div>
+        </nav>
+        
         <header class="hero-section">
             <div class="hero-content">
-                <h1>Hungry? Find Your Next Meal! 🍜</h1>
-                <p>Discover the best restaurants and dishes near you.</p>
-                <div class="search-bar">
-                    <input type="text" placeholder="Search for food, restaurant, or cuisine...">
-                    <button><i class="fas fa-search"></i> Search</button>
+                <h1>Hungry? Order Food Now!</h1>
+                <div class="search-container">
+                    <div class="location-select">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <select>
+                            <option>Current Location</option>
+                            <option>New Delhi</option>
+                            <option>Mumbai</option>
+                        </select>
+                    </div>
+                    <div class="search-input">
+                        <i class="fas fa-search"></i>
+                        <input type="text" placeholder="Search for restaurant, cuisine, or dish">
+                    </div>
+                    <button class="search-btn"><i class="fas fa-search"></i></button>
                 </div>
             </div>
         </header>
 
-        <main class="main-content">
-            <section class="filter-bar">
-                <h2>Suggested Restaurants</h2>
-                <div class="filters">
-                    <button class="filter-btn active">Near Me</button>
-                    <button class="filter-btn">High Rated</button>
-                    <button class="filter-btn">New</button>
-                    <select>
-                        <option>Cuisine Type</option>
-                        <option>Italian</option>
-                        <option>Indian</option>
-                        <option>Mexican</option>
-                    </select>
+        <main class="main-content-area">
+            
+            <section class="quick-links-section">
+                <h2>In the Mood for...?</h2>
+                <div class="category-scroll-bar">
+                    <div class="category-item">
+                        <div class="category-icon-bg"><i class="fas fa-pizza-slice"></i></div>
+                        <span>Pizza</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon-bg"><i class="fas fa-burger"></i></div>
+                        <span>Burgers</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon-bg"><i class="fas fa-bowl-rice"></i></div>
+                        <span>Biryani</span>
+                    </div>
+                     <div class="category-item">
+                        <div class="category-icon-bg"><i class="fas fa-ice-cream"></i></div>
+                        <span>Desserts</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon-bg"><i class="fas fa-fish"></i></div>
+                        <span>Seafood</span>
+                    </div>
+                    <div class="category-item">
+                        <div class="category-icon-bg"><i class="fas fa-seedling"></i></div>
+                        <span>Healthy</span>
+                    </div>
                 </div>
             </section>
+            
+            <hr class="separator">
 
-            <section class="restaurant-grid">
-                <div class="restaurant-card">
-                    <img src="https://via.placeholder.com/300x200?text=Italian+Food" alt="Pizza from La Trattoria">
-                    <div class="card-info">
-                        <h3>La Trattoria 🇮🇹</h3>
-                        <p class="cuisine">Italian • $$$</p>
-                        <p class="rating"><i class="fas fa-star"></i> 4.8 (1.2K Reviews)</p>
-                        <p class="distance">2.5 km away</p>
-                        <button class="view-btn">View Menu</button>
-                    </div>
+            <section class="restaurant-listing">
+                <h2>Popular Restaurants Near You</h2>
+                <div class="filter-sort-bar">
+                    <button class="filter-btn active">Delivery</button>
+                    <button class="filter-btn">Dining Out</button>
+                    <button class="filter-btn">4 Stars +</button>
+                    <button class="filter-btn">Fastest</button>
                 </div>
 
-                <div class="restaurant-card">
-                    <img src="https://via.placeholder.com/300x200?text=Asian+Noodles" alt="Noodles from Wok Dynasty">
-                    <div class="card-info">
-                        <h3>Wok Dynasty 🥢</h3>
-                        <p class="cuisine">Asian Fusion • $$</p>
-                        <p class="rating"><i class="fas fa-star"></i> 4.5 (800 Reviews)</p>
-                        <p class="distance">1.0 km away</p>
-                        <button class="view-btn">View Menu</button>
+                <div class="restaurant-grid">
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/400x250?text=The+Great+Kebab" alt="Restaurant Image">
+                        <div class="time-tag">25 min</div>
+                        <div class="discount-tag">50% OFF</div>
+                        <div class="card-details">
+                            <h3>The Great Kebab 🍢</h3>
+                            <div class="rating"><i class="fas fa-star"></i> 4.5</div>
+                            <p class="cuisine-price">North Indian, Mughlai • ₹₹₹</p>
+                            <p class="cost">₹400 for one</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="restaurant-card">
-                    <img src="https://via.placeholder.com/300x200?text=Burger+Fries" alt="Burger from The Grill House">
-                    <div class="card-info">
-                        <h3>The Grill House 🍔</h3>
-                        <p class="cuisine">American • $$</p>
-                        <p class="rating"><i class="fas fa-star"></i> 4.2 (2.1K Reviews)</p>
-                        <p class="distance">4.1 km away</p>
-                        <button class="view-btn">View Menu</button>
+                    
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/400x250?text=Pizza+Paradise" alt="Restaurant Image">
+                        <div class="time-tag">35 min</div>
+                        <div class="card-details">
+                            <h3>Pizza Paradise 🍕</h3>
+                            <div class="rating"><i class="fas fa-star"></i> 4.2</div>
+                            <p class="cuisine-price">Italian, Fast Food • ₹₹</p>
+                            <p class="cost">₹300 for one</p>
+                        </div>
                     </div>
-                </div>
-
-                <div class="restaurant-card">
-                    <img src="https://via.placeholder.com/300x200?text=Vegan+Bowl" alt="Vegan Bowl from Green Eats">
-                    <div class="card-info">
-                        <h3>Green Eats 🥗</h3>
-                        <p class="cuisine">Vegan • $</p>
-                        <p class="rating"><i class="fas fa-star"></i> 4.9 (450 Reviews)</p>
-                        <p class="distance">0.5 km away</p>
-                        <button class="view-btn">View Menu</button>
+                    
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/400x250?text=Asian+Wok+House" alt="Restaurant Image">
+                        <div class="time-tag">18 min</div>
+                        <div class="discount-tag">FREE Delivery</div>
+                        <div class="card-details">
+                            <h3>Asian Wok House 🥢</h3>
+                            <div class="rating"><i class="fas fa-star"></i> 4.8</div>
+                            <p class="cuisine-price">Chinese, Thai • ₹₹₹</p>
+                            <p class="cost">₹550 for one</p>
+                        </div>
+                    </div>
+                    
+                    <div class="restaurant-card">
+                        <img src="https://via.placeholder.com/400x250?text=Juice+Bar" alt="Restaurant Image">
+                        <div class="time-tag">15 min</div>
+                        <div class="card-details">
+                            <h3>Fresh Juices & Smoothies 🍹</h3>
+                            <div class="rating"><i class="fas fa-star"></i> 4.1</div>
+                            <p class="cuisine-price">Healthy, Beverages • ₹</p>
+                            <p class="cost">₹200 for one</p>
+                        </div>
                     </div>
                 </div>
             </section>
         </main>
+        
+        <footer class="app-footer">
+            <p>&copy; 2025 FoodHub. Not affiliated with Zomato or Swiggy. For demonstration purposes only.</p>
+        </footer>
     </div>
 </body>
 </html>
-/* --- Global Styles and Reset --- */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f8f8f8;
-    color: #333;
-}
-
-/* --- Hero Section Styling --- */
-.hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://via.placeholder.com/1500x400?text=Delicious+Food+Background');
-    background-size: cover;
-    background-position: center;
-    color: white;
-    text-align: center;
-    padding: 80px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.hero-content h1 {
-    font-size: 3em;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.2em;
-    margin-bottom: 30px;
-}
-
-.search-bar {
-    display: flex;
-    justify-content: center;
-    max-width: 600px;
-    margin: 0 auto;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-}
-
-.search-bar input {
-    flex-grow: 1;
-    border: none;
-    padding: 15px 20px;
-    font-size: 1em;
-    outline: none;
-}
-
-.search-bar button {
-    background-color: #ff5722; /* Accent Color */
-    color: white;
-    border: none;
-    padding: 15px 25px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-.search-bar button:hover {
-    background-color: #e64a19;
-}
-
-/* --- Main Content Layout --- */
-.main-content {
-    padding: 30px 5%;
-    max-width: 1400px;
-    margin: 0 auto;
-}
-
-/* --- Filter Bar Styling --- */
-.filter-bar {
-    margin-bottom: 30px;
-    padding: 15px 0;
-    border-bottom: 1px solid #eee;
-}
-
-.filter-bar h2 {
-    font-size: 1.8em;
-    color: #333;
-    margin-bottom: 15px;
-}
-
-.filters {
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-.filter-btn, .filters select {
-    padding: 10px 15px;
-    border: 1px solid #ccc;
-    background-color: white;
-    border-radius: 25px;
-    cursor: pointer;
-    transition: all 0.2s;
-    font-size: 0.9em;
-}
-
-.filter-btn:hover {
-    border-color: #ff5722;
-    color: #ff5722;
-}
-
-.filter-btn.active {
-    background-color: #ff5722;
-    color: white;
-    border-color: #ff5722;
-}
-
-/* --- Restaurant Grid Styling --- */
-.restaurant-grid {
-    display: grid;
-    /* Responsive grid: minimum 300px per column */
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.restaurant-card {
-    background-color: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s;
-}
-
-.restaurant-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
-}
-
-.restaurant-card img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-info {
-    padding: 15px;
-}
-
-.card-info h3 {
-    margin-top: 0;
-    font-size: 1.5em;
-    color: #333;
-}
-
-.cuisine {
-    color: #777;
-    font-size: 0.9em;
-    margin-bottom: 5px;
-}
-
-.rating {
-    color: #ffc107; /* Star color */
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.rating .fa-star {
-    margin-right: 5px;
-}
-
-.distance {
-    font-size: 0.9em;
-    color: #999;
-    margin-bottom: 15px;
-}
-
-.view-btn {
-    width: 100%;
-    padding: 10px;
-    background-color: #2196f3; /* Button Color */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s;
-}
-
-.view-btn:hover {
-    background-color: #1976d2;
-}
-
-/* --- Basic Responsiveness (for smaller screens) --- */
-@media (max-width: 600px) {
-    .hero-section {
-        padding: 50px 20px;
-    }
-
-    .hero-content h1 {
-        font-size: 2em;
-    }
-
-    .search-bar {
-        flex-direction: column;
-    }
-
-    .search-bar input, .search-bar button {
-        width: 100%;
-        border-radius: 0;
-    }
-
-    .search-bar input {
-        border-bottom: 1px solid #eee;
-    }
-
-    .filter-btn, .filters select {
-        width: 100%; /* Full width buttons on small screens */
-        margin-bottom: 5px;
-    }
-}
