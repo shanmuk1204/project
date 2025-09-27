@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food & Restaurant Finder</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="app-container">
+        <header class="hero-section">
+            <div class="hero-content">
+                <h1>Hungry? Find Your Next Meal! 🍜</h1>
+                <p>Discover the best restaurants and dishes near you.</p>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for food, restaurant, or cuisine...">
+                    <button><i class="fas fa-search"></i> Search</button>
+                </div>
+            </div>
+        </header>
+
+        <main class="main-content">
+            <section class="filter-bar">
+                <h2>Suggested Restaurants</h2>
+                <div class="filters">
+                    <button class="filter-btn active">Near Me</button>
+                    <button class="filter-btn">High Rated</button>
+                    <button class="filter-btn">New</button>
+                    <select>
+                        <option>Cuisine Type</option>
+                        <option>Italian</option>
+                        <option>Indian</option>
+                        <option>Mexican</option>
+                    </select>
+                </div>
+            </section>
+
+            <section class="restaurant-grid">
+                <div class="restaurant-card">
+                    <img src="https://via.placeholder.com/300x200?text=Italian+Food" alt="Pizza from La Trattoria">
+                    <div class="card-info">
+                        <h3>La Trattoria 🇮🇹</h3>
+                        <p class="cuisine">Italian • $$$</p>
+                        <p class="rating"><i class="fas fa-star"></i> 4.8 (1.2K Reviews)</p>
+                        <p class="distance">2.5 km away</p>
+                        <button class="view-btn">View Menu</button>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <img src="https://via.placeholder.com/300x200?text=Asian+Noodles" alt="Noodles from Wok Dynasty">
+                    <div class="card-info">
+                        <h3>Wok Dynasty 🥢</h3>
+                        <p class="cuisine">Asian Fusion • $$</p>
+                        <p class="rating"><i class="fas fa-star"></i> 4.5 (800 Reviews)</p>
+                        <p class="distance">1.0 km away</p>
+                        <button class="view-btn">View Menu</button>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <img src="https://via.placeholder.com/300x200?text=Burger+Fries" alt="Burger from The Grill House">
+                    <div class="card-info">
+                        <h3>The Grill House 🍔</h3>
+                        <p class="cuisine">American • $$</p>
+                        <p class="rating"><i class="fas fa-star"></i> 4.2 (2.1K Reviews)</p>
+                        <p class="distance">4.1 km away</p>
+                        <button class="view-btn">View Menu</button>
+                    </div>
+                </div>
+
+                <div class="restaurant-card">
+                    <img src="https://via.placeholder.com/300x200?text=Vegan+Bowl" alt="Vegan Bowl from Green Eats">
+                    <div class="card-info">
+                        <h3>Green Eats 🥗</h3>
+                        <p class="cuisine">Vegan • $</p>
+                        <p class="rating"><i class="fas fa-star"></i> 4.9 (450 Reviews)</p>
+                        <p class="distance">0.5 km away</p>
+                        <button class="view-btn">View Menu</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+</body>
+</html>
